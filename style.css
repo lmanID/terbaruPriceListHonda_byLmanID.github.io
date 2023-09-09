@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,400&family=Montserrat:wght@700&family=Poppins:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-behavior: smooth; */
+}
+
+button {
+  border: none;
+}
+
+/* ===================================PRICE LIST BRIO=================================== */
+.sectionList {
+  display: grid;
+  row-gap: 8px;
+}
+
+/*=================EFEK TRANSISI====================*/
+.even {
+  animation: evenAnimation 2s forwards;
+}
+
+.odd {
+  animation: oddAnimation 2s forwards;
+}
+
+@keyframes evenAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(80%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes oddAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-80%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*=================AKHIR EFEK TRANSISI==============*/
+
+.sectionList .accordion {
+  /* width: 100%; */
+  background-color: rgb(255, 255, 255);
+  color: rgb(20, 20, 20);
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  /* margin-bottom: 12px;
+  padding: 6px 0; */
+  border: 2px solid black;
+  border-radius: 6px;
+  transition: 0.5s;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionList .accordion:hover {
+  background-color: #d70b21;
+  color: white;
+}
+.sectionList .accordion.active {
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+
+.sectionList .accordion .icon {
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  right: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
+
+.sectionList .accordion .icon.active {
+  transform: rotate(-90deg);
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  margin: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s; /* Menambahkan transisi ke opacity */
+}
+
+.panel.active {
+  max-height: 1000px;
+}
+
+.panel .list .listHeader {
+  background-color: #d70b21;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.panel ul li {
+  list-style-type: none;
+  display: flex;
+  border: solid 1px black;
+  border-radius: 6px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  padding: 5px;
+  width: 300px;
+}
+/* ===================================AKHIR PRICE LIST BRIO=================================== */
+
+/* =========== BOOTSTRAP CSS =========== */
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* ================================================== HEADER CSS ========================================== */
+
+  .header {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    position: sticky;
+  }
+
+  .header-logo {
+    width: 40%;
+  }
+
+  .btn_menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d70b21;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .header-logo_menu {
+    width: 30%;
+    display: none;
+  }
+
+  .btn_menu.active {
+    background-color: #ffffff;
+    padding: 16px 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn_menu.active .header-logo_menu {
+    display: inline;
+  }
+
+  .btn_menu.active i {
+    color: black;
+  }
+
+  .btn_menu_toggle i {
+    font-size: 1.5em;
+    color: #ffffff;
+    font-weight: 500;
+    display: block;
+  }
+
+  .btn_logo img {
+    width: 100%;
+  }
+
+  .btn_menu_bottom {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    /* padding: 6px; */
+    padding-top: 12px;
+    padding-bottom: 8px;
+    border-top: solid 0.1px rgb(158, 158, 158);
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .btn_menu_bottom .icon_btn_bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* background-color: red; */
+    width: 95%;
+    gap: 4px 12px;
+  }
+
+  .icon_btn_bottom li {
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title_btn_bottom a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.55em;
+    text-align: center;
+    font-family: Poppins;
+  }
+
+  .btn_menu_bottom i {
+    background-color: white;
+    font-size: 1.5em;
+    color: rgb(20, 20, 20);
+    align-items: center;
+  }
+
+  /* ================================================== AKHIR HEADER CSS ========================================== */
+
+  /* ================================================== NAV CSS ========================================== */
+
+  .nav_menu_list {
+    position: fixed;
+    width: 75%;
+    background-color: #d70b21;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1s, opacity 1.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav_menu_list.active {
+    opacity: 1;
+    transform: translateX(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu_list {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    list-style-type: none;
+
+    /* background-color: blue; */
+  }
+
+  .list_item a {
+    color: white;
+    font-family: Poppins;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+
+  .menu_list .product {
+    /* background-color: wheat; */
+    position: relative;
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+
+  .list_item .icon_list {
+    color: white;
+    font-size: 1.8em;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transform: translateY(-4px) rotate(-180deg);
+  }
+
+  .box_icon_close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    background-color: inherit;
+  }
+
+  .box_icon_close i {
+    font-size: 1em;
+    color: white;
+    font-weight: 300;
+  }
+
+  /* ================================================== AKHIR NAV CSS ========================================== */
+  /* ==================== Judul Price List ================== */
+  .header_list {
+    font-family: Poppins;
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    color: rgb(20, 20, 20);
+    border-bottom: 1px solid #525252;
+    padding-bottom: 12px;
+    position: relative;
+    /* box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); */
+  }
+
+  .catatan_penting {
+    font-family: Rajdhani;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #474747;
+    text-align: center;
+    margin-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hubungi {
+    font-size: 1.2em;
+    color: #141414;
+  }
+
+  .kontak {
+    color: #d70b21;
+    font-size: 1.2em;
+  }
+
+  .header_list::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Sesuaikan dengan ketebalan bayangan */
+    bottom: 0;
+    left: 0;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+  }
+  /* ====================Akhir Judul Price List==================== */
+  /* ==================================================PRICE LIST CSS========================================== */
+
+  .container-list {
+    /* background-color: aquamarine; */
+    overflow: hidden;
+    padding: 0 8px;
+    margin-bottom: 85px;
+  }
+  .sectionList {
+    gap: 0;
+    margin-bottom: 8px;
+    overflow: hidden;
+    /* background-color: aqua; */
+  }
+  .sectionList .accordion {
+    font-size: 1em;
+    font-weight: 500;
+    padding: 4px;
+    border-width: 1px;
+  }
+
+  .sectionList .accordion .icon {
+    font-size: 1.125em;
+    font-weight: 600;
+  }
+
+  .panel {
+    column-gap: 10px;
+    margin: 0 8px;
+  }
+  .panel .list .listHeader {
+    font-size: 1em;
+    font-weight: 500;
+  }
+  .panel ul li {
+    width: auto;
+    font-size: 0.8em;
+    margin-top: 6px;
+    padding: 5px 15px;
+  }
+  /* ================================================== AKHIR PRICE LIST CSS ========================================== */
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+
+/* // `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* // `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+}
