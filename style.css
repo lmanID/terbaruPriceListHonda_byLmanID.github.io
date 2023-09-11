@@ -345,8 +345,24 @@ button {
     color: rgb(20, 20, 20);
     border-bottom: 1px solid #525252;
     padding-bottom: 12px;
+    padding-top: 12px;
     position: relative;
+    background-color: #f3f3f3;
+    border-radius: 5px;
     /* box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2); */
+  }
+
+  .artikelPromo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #8d8d8d; */
+    border-radius: 5px;
+    /* margin-left: 18px;
+    margin-right: 18px; */
+    padding-bottom: 12px;
+    background-color: #f3f3f3;
   }
 
   .catatan_penting {
@@ -360,14 +376,31 @@ button {
     padding-right: 16px;
   }
 
+  .catatan_penting .promomenarik {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+  }
+
   .hubungi {
     font-size: 1.2em;
-    color: #141414;
+    color: #272727;
   }
 
   .kontak {
     color: #d70b21;
     font-size: 1.2em;
+    margin-top: 5px;
+  }
+
+  .mulaiObrolan {
+    background-color: #d70b21;
+    color: #ffffff;
+    font-size: 1em;
+    border-radius: 5px;
+    padding: 10px 16px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-top: 5px;
   }
 
   .header_list::before {
@@ -386,7 +419,6 @@ button {
     /* background-color: aquamarine; */
     overflow: hidden;
     padding: 0 8px;
-    margin-bottom: 85px;
   }
   .sectionList {
     gap: 0;
@@ -421,6 +453,42 @@ button {
     padding: 5px 15px;
   }
   /* ================================================== AKHIR PRICE LIST CSS ========================================== */
+
+  /* =================================== INI FOOTER =================================== */
+  .footer {
+    width: 100%;
+    background-color: rgb(20, 20, 20);
+    margin-top: 16px;
+    margin-bottom: 80px;
+    padding: 12px;
+  }
+
+  .footer .logoFooter {
+    display: flex;
+    /* background-color: wheat; */
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid rgb(109, 109, 109);
+    margin-bottom: 12px;
+  }
+
+  .footer .logoHonda {
+    display: block;
+    width: 25%;
+    margin-bottom: 12px;
+  }
+
+  .footer .pengembangWeb {
+    font-family: Rajdhani;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #adadad;
+  }
+
+  .footer .logoLman {
+    width: 20%;
+  }
+  /* =================================== AKHIR FOOTER =================================== */
 }
 
 /* // `md` applies to small devices (landscape phones, less than 768px) */

@@ -45,45 +45,47 @@ window.addEventListener('scroll', fix_btn_menu);
 
 // HONDA BRIO
 let strTypeHondaBrio =
-  'S MT, E MT, E CVT, RS MT, RS CVT, RS URBANITE MT, RS URBANITE CVT';
+  'Satya S MT, Satya E MT, Satya E CVT, RS MT, RS CVT, RS MT 2 Tone, RS CVT 2 Tone';
 let strPriceHondaBrio =
-  '164.400.000, 179.100.000, 190.400.000, 223.100.000, 223.100.000, 233.900.000, 243.900.000';
+  '181.180.000, 194.080.000, 209.580.000, 251.680.000, 262.380.000, 254.180.000, 264.880.000';
 
 // HONDA ALL New BR-V
 let strTypeHondaAllNewBrv =
-  'BR-V S MT, BR-V E MT, BR-V E CVT, BR-V PRESS, BR-V PRESS Sensing';
+  'BR-V S MT, BR-V E MT, BR-V E CVT,  FMC PRESTIGE CVT, FMC PRESTIGE HS CVT';
 let strPriceHondaAllNewBrv =
-  '287.800.000, 302.000.000, 312.000.000, 335.000.000, 355.000.000';
+  '319.400.000, 333.600.000, 344.600.000, 367.600.000, 387.600.000';
 
 // HONDA CRV
-let strTypeHondaCrv = 'CR-V 2.0, CR-V 1.5, CRV 1.5 PRES, CRV BLACK EDITION';
-let strPriceHondaCrv = '525.300.000, 606.300.000, 669.600.000, 684.600.000';
+let strTypeHondaCrv = 'CBU 1.5 TURBO, CBU RS E:HEV';
+let strPriceHondaCrv = '767.900.000, 828.850.000';
 
 // HONDA ALL New HR-V
 let strTypeHondaAllNewHrv =
-  '1.5 S CVT, 1.5 E CVT, 1.5 SE CVT, 1.5 TURBO RS, 1.5 E CVT Two Tone, 1.5 SE CVT  Two Tone, 1.5 TURB RS Two Tone';
+  'S CVT, E CVT, 1.5 E CVT 2 Tone, 1.5 SE CVT, 1.5 SE CVT 2 Tone, 1.5T RS CVT, 1.5T RS CVT 2 Tone';
 let strPriceHondaAllNewHrv =
-  '375.900.000, 395.900.000, 416.100.000, 529.900.000, 398.400.000, 418.600.000, 532.400.000';
+  '396.520.000, 416.520.000, 419.020.000, 436.720.000, 439.220.000, 557.250.000, 559.750.000';
 
 // HONDA WR-V
-let strTypeHondaWrv = 'E CVT, E RS CVT, E RS CVT SENSING';
-let strPriceHondaWrv = '279.400.000, 297.400.000, 317.400.000';
+let strTypeHondaWrv =
+  'E MT, E CVT, RS CVT, RS CVT 2 Tone, RS HS CVT, RS HS CVT 2 TONE';
+let strPriceHondaWrv =
+  '288.000.000, 299.010.000, 317.010.000, 319.510.000, 337.010.000, 339.510.000';
 
 // HONDA City Hatch Back
 let strTypeHondaCityHatchBack = 'RS MT, RS CVT, RS HS CVT';
-let strPriceHondaCityHatchBack = '343.600.000, 353.600.000, 373.600.000';
+let strPriceHondaCityHatchBack = '363.900.000, 374.910.000, 394.910.000';
 
 // HONDA City
-let strTypeHondaCity = 'ALL NEW CITY';
-let strPriceHondaCity = '373.900.000';
+let strTypeHondaCity = 'E CVT';
+let strPriceHondaCity = '395.030.000';
 
 // HONDA Civic
 let strTypeHondaCivic = 'ALL NEW CIVIC RS';
-let strPriceHondaCivic = '601.400.000';
+let strPriceHondaCivic = '636.760.000';
 
 // HONDA Accord
-let strTypeHondaAccord = 'ACCORD 1.5 TURBO';
-let strPriceHondaAccord = '787.300.000';
+let strTypeHondaAccord = 'ACCORD 1.5T CVT';
+let strPriceHondaAccord = '840,470,000';
 
 let hondaData = new Map();
 // Memasukkan data tipe dan harga ke dalam objek map
